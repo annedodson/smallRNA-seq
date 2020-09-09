@@ -17,7 +17,7 @@ This is a pipeline to analyze next-generation sequencing of small RNAs in *C. el
 		  ├── results
 		  └── scripts
 		```
-	- Before continuing on with the rest of <code>smallRNAseq_pipeline.sh</code>, make sure that:
+	- Before continuing on with the rest of <code>generate_count_matrices.sh</code>, make sure that:
 		- You've copied your raw, demultiplexed fastq files into the <code>raw_data</code> directory.
 		- All Part 1 scripts are in the <code>scripts</code> directory.
 		- Your metadata file <code>metadata.txt</code> is in the <code>meta</code> directory. Column 1 of <code>metadata.txt</code> must contain the desired output filename, and there must also be a column containing the input filename. See <code>metadata.txt</code> in this repository for an example.
