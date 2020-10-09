@@ -33,7 +33,7 @@ volcano <- function(res_table_tb, padj_cutoff, lfc_cutoff) {
     geom_text_repel(aes(label=genelabels)) +
     xlab("log2 fold change") +
     ylab("-log10 adjusted p-value") +
-    theme(legend.position = "none", plot.title=element_text(size=rel(1.5), hjust=0.5), axis.title=element_text(size=rel(1.25)))
+    theme(legend.position = "none", axis.title=element_text(size=rel(1.25)))
 }
 
 
