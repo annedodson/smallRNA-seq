@@ -38,8 +38,8 @@ samtools index ${output_dir}/${base}.bam ${output_dir}/${base}.bai
 ### normalizes using counts per million (CPM)
 #### First, generate bedgraph for the forward strand
 #### --samFlagExclude 16 filters out reads that map to the reverse strand
-bamCoverage -b ${output_dir}/${base}.bam -p $2 -o ${output_dir}/${base}.norm.forward.bedGraph -of bedgraph -bs 5 --normalizeUsing CPM --samFlagExclude 16
+bamCoverage -b ${output_dir}/${base}.bam -p $2 -o ${output_dir}/${base}.norm.forward.bedGraph -of bedgraph -bs 1 --normalizeUsing CPM --samFlagExclude 16
 #### Second, generate bedgraph for the reverse strand
 #### --samFlagInclude 16 selects only the reads the map to the reverse strand
-bamCoverage -b ${output_dir}/${base}.bam -p $2 -o ${output_dir}/${base}.norm.reverse.bedGraph -of bedgraph -bs 5 --normalizeUsing CPM --samFlagInclude 16
+bamCoverage -b ${output_dir}/${base}.bam -p $2 -o ${output_dir}/${base}.norm.reverse.bedGraph -of bedgraph -bs 1 --normalizeUsing CPM --samFlagInclude 16
 
