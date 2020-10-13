@@ -56,6 +56,7 @@ do
 done
 
 # Merge the fastq files from different lanes and store them in ${results}/trim3_trim5_merge
+## Note, merge_lanes.sh assumes that the lane number indicator immediately precedes the .fastq extension in the sample file name (see metadata.txt example)
 sbatch -p short -t 0-4:00 --job-name merge --wrap="sh ${scripts}/merge_lanes.sh $main_dir"
 
 # Map to the genome (WBcel235) using bowtie

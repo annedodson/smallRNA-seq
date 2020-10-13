@@ -32,7 +32,7 @@ This is a pipeline to analyze next-generation sequencing of small RNAs in *C. el
 		```
 		With this change, running <code>select_5prime_barcode.sh</code> will simply assign new, meaningful names to the fastq files using <code>metadata.txt</code> and place them in a new directory in <code>results</code> called <code>sort_5prime</code>.
 
-2. **Differential analysis and visualization.** Uses the count matrices generated in Part 1 to perform a simple **wild type vs. mutant** analysis to identify genes that are differentially targeted by small RNAs. This part of the pipeline is designed to run as an RStudio project (<code>DA_and_Visualization.Rproj</code>).
+2. **Differential analysis and visualization.** Uses the count matrices generated in Part 1 to perform a simple **wild type vs. mutant** analysis to identify genes that are differentially targeted by small RNAs. This part of the pipeline is designed to run as an RStudio project (<code>DA_and_visualization.Rproj</code>).
 	- <code>main_script.R</code> is the main file for Part 2.
 
 	- Before beginning, make sure the count matrices are in the <code>data</code> folder and that the metadata file (.csv format) is in the <code>meta</code> folder. Examples of these files can be found in the <code>example_files</code> folder.

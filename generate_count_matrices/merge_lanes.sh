@@ -11,9 +11,9 @@ mkdir -p ${1}/results/trim3_trim5_merge
 
 # Create a list of output sample names
 ## Use metadata.txt to creat a list of the input sample names
-## Remove the lane designation of the sample name (_L*) as well as anything that follows (e.g. .fastq)
+## Remove the lane designation of the sample name (_L*) and the .fastq extension
 ## Remove duplicate names with sort
-samples=$(awk 'FNR > 1 {print $1}' ${1}/meta/metadata.txt | awk -F '_L' '{print $1}' | sort -u)
+samples=$(awk 'FNR > 1 {print $1}' ${1}/meta/metadata.txt | awk -F '_L.\\.fastq' '{print $1}' | sort -u)
 
 for sample in $samples
 do
